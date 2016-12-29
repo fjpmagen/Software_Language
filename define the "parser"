@@ -3,15 +3,20 @@ http://www.jianshu.com/p/35b9fc5467e0
 
 什么是Parser
 
-所谓parser，一般是指把某种格式的文本（字符串）转换成某种数据结构的过程。最常见的parser，是把程序文本转换成编译器内部的一种叫做“抽象语法树”（AST）的数据结构。也有简单一些的parser，用于处理CSV，JSON，XML之类的格式。
+所谓parser，一般是指把某种格式的文本（字符串）转换成某种数据结构的过程。最常见的parser，是把程序文本转换成编译器内部的一种叫做“抽象语法树”（AST）的数据
+结构。也有简单一些的parser，用于处理CSV，JSON，XML之类的格式。
 
-举个例子，一个处理算数表达式的parser，可以把“1+2”这样的，含有1，+，2三个字符的字符串，转换成一个对象（object）。这个对象就像new BinaryExpression(ADD, new Number(1), new Number(2))这样的Java构造函数调用生成出来的那样。
+举个例子，一个处理算数表达式的parser，可以把“1+2”这样的，含有1，+，2三个字符的字符串，转换成一个对象（object）。这个对象就像new
+BinaryExpression(ADD, new Number(1), new Number(2))这样的Java构造函数调用生成出来的那样。
 
-之所以需要做这种从字符串到数据结构的转换，是因为编译器是无法直接操作“1+2”这样的字符串的。实际上，代码的本质根本就不是字符串，它本来就是一个具有复杂拓扑的数据结构，就像电路一样。“1+2”这个字符串只是对这种数据结构的一种“编码”，就像ZIP或者JPEG只是对它们压缩的数据的编码一样。
+之所以需要做这种从字符串到数据结构的转换，是因为编译器是无法直接操作“1+2”这样的字符串的。实际上，代码的本质根本就不是字符串，它本来就是一个具有复杂拓扑
+的数据结构，就像电路一样。“1+2”这个字符串只是对这种数据结构的一种“编码”，就像ZIP或者JPEG只是对它们压缩的数据的编码一样。
 
-这种编码可以方便你把代码存到磁盘上，方便你用文本编辑器来修改它们，然而你必须知道，文本并不是代码本身。所以从磁盘读取了文本之后，你必须先“解码”，才能方便地操作代码的数据结构。比如，如果上面的Java代码生成的AST节点叫node，你就可以用node.operator来访问ADD，用node.left来访问1，node.right来访问2。这是很方便的。
-
-对于程序语言，这种解码的动作就叫做parsing，用于解码的那段代码就叫做parser。
+这种编码可以方便你把代码存到磁盘上，方便你用文本编辑器来修改它们，然而你必须知道，文本并不是代码本身。所以从磁盘读取了文本之后，你必须先“解码”，才能方便地操作代码的数据结构。比如，如果上面的Java代码生成的AST节点叫node，你就可以用node.operator来访问ADD，用node.left来访问1，node.right来访问2。这是很方
+便的。对于程序语言，这种解码的动作就叫做parsing，用于解码的那段代码就叫做parser。
 
 In computer technology, a parser is a program, usually part of a compiler, that receives input in the form of sequential source program 
-instructions, interactive online commands, markup tags, or some other defined interface and breaks them up into parts (for example, the nouns (objects), verbs (methods), and their attributes or options) that can then be managed by other programming (for example, other components in a compiler). A parser may also check to see that all input has been provided that is necessary.
+instructions, interactive online commands, markup tags, or some other defined interface and breaks them up into parts (for example, the
+nouns (objects), verbs (methods), and their attributes or options) that can then be managed by other programming (for example, other
+components in a compiler). A parser may also check to see that all input has been provided that is necessary.
+
