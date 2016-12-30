@@ -1,0 +1,1 @@
+Grouping decisions are made before substitutions are performed, which is an important property of Tcl.

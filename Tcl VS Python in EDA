@@ -1,0 +1,55 @@
+
+
+why did these companies choose Tcl over Python
+
+https://bytes.com/topic/python/answers/730478-why-did-these-companies-choose-tcl-over-python
+
+
+Here are some reasons why people choose language X over Y:
+
+- History. We've always used X, so why should we use Y?
+- Peer pressure. Everyone else uses X.
+- Licensing. Language X's license fits our business better than
+language Y.
+- Support. It is easier/safer/etc... to get support for language X
+over language Y. (In some cases, the company that wrote X provides
+support contracts while language Y doesn't have such a company.)
+- Customer demands. Our customers want language X support, not Y.
+- Features. Language X does A, B, and C really well, while language Y
+only does it a little bit or not very well.
+
+You'd have to ask them why they do what they do, but it's probably a
+combination of the above. Oftentimes, the reasons cited are based on
+assumptions and not facts. Of course, objectively measuring any
+language is difficult at best, so there is little hope of this ever
+getting any better.
+
+As far as performance, memory footprint, cross-platform support, I
+don't believe Tcl is better than Python (and probably not worse), at
+least compared to C.
+
+Tcl might also be a more natural language for hardware people who have
+a hard time accepting the more esoteric concepts of software
+engineering. It's a straight-forward language with little in the way
+of what they may consider fluff.
+
+
+---------------------------------------------------------------------------------------------
+
+I think this question needs to be answered on a case-by-case basis,
+but my guess is that it is in most cases historical. Work on Tcl
+started in 1988, and it was the first (major?) embeddable scripting
+language (that is also free software etc). Python wasn't released
+until 1991, and wasn't first recognized as being just as easily
+embeddable (and I think early releases weren't as easily embeddable
+as today's Python is).
+
+Tcl's original objective was to support circuit design, so people
+in that field clearly knew that Tcl worked, but they were likely
+unaware of any alternatives (or else the future of these alternatives
+may have been uncertain).
+
+So at that time, Tcl would have been the obvious (because only)
+choice. Now these products are stuck with Tcl, and redoing all
+the work (including the existing extension modules!) in a different
+programming language would be a lot of work.
