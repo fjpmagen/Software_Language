@@ -1,0 +1,24 @@
+Why are Perl and TCL scripting languages used in the VLSI industry? Why not using other scripting languages?
+https://www.quora.com/Why-are-Perl-and-TCL-scripting-languages-used-in-the-VLSI-industry-Why-not-using-other-scripting-languages
+The VLSI design industry relies heavily on electronic design automation (EDA), and scripting forms an integral part of EDA. From my experience, Perl is the most popular choice for this job, but TCL is also used extensively.
+
+Why Perl?
+
+Perl is always the first choice for scripting jobs because of its simplicity. EDA scripting involves specialized tasks like parsing of netlist files, parsing of timing reports, parsing of VCD files, generation of ECO (Engineering Change Order) scripts, generation of reports in Excel format, generation of progress dashboards in HTML format, etc.
+Perl syntax is very simple & easy to learn.
+Perl keywords are very similar to C, which is a programming language that most of us are acquainted with.
+Perl is very easy to integrate with the Unix Shell.
+Perl is powerful in file-handling, e.g., reading & writing text files.
+Perl has very useful inbuilt functions like "sort", "grep", etc.
+Perl has a huge repository of modules available readily on CPAN (Comprehensive Perl Archive Network). There are Perl modules for Excel parsing & writing, HTML parsing, Verilog parsing, etc along with regular updates & user support.
+Perl is known for its powerful pattern matching features. VLSI reports are almost always parsed for particular petterns like module names, net names, gate names, keywords, etc. Perl is the best choice for this task.
+Perl supports object-oriented programming.
+Perl has very powerful debug features.
+
+Why TCL?
+
+TCL is also used, but not as widely as Perl. There is a very specific reason behind the usage of TCL scripts - almost all EDA tools use TCL for their command line interface. This is because TCL was originally developed for scripts involving command-line tasks. So, it is easier to use TCL scripts when working with EDA tools like those offered by Synopsys, Cadence, etc. TCL has some fundamental differences from Perl, e.g., TCL does not have an inbuilt debugger. However, TCL is very good at command-line interfacing.
+
+Perl v/s TCL
+
+Perl is the favourite for building in-house tools & scripts, while TCL is used when working with commercial EDA tools. So, how do we integrate the two processes? There is a "TCL" module for Perl which links TCL into Perl & allows Perl functions to be called from TCL & vice-versa. This way, we can get the best out of both worlds!
