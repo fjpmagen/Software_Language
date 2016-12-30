@@ -22,3 +22,13 @@ TCL is also used, but not as widely as Perl. There is a very specific reason beh
 Perl v/s TCL
 
 Perl is the favourite for building in-house tools & scripts, while TCL is used when working with commercial EDA tools. So, how do we integrate the two processes? There is a "TCL" module for Perl which links TCL into Perl & allows Perl functions to be called from TCL & vice-versa. This way, we can get the best out of both worlds!
+
+-------------------------------------------------------------------------------------------------------------
+perl is used to find/replace/substitue any of the patterns in the file in the design flow.
+
+tcl tool cmd lang, is used to control the tool, or can be used to pop out graphics window with radio buttons and other features for the better control of the tool.
+
+perl is used in file processing.
+But while working inside design tool... i can only use TCL. Synopsys, MAgma and Cadence will recognize TCL commands inside the tools. 
+
+So my answer, Its PERL outside, TCL inside
